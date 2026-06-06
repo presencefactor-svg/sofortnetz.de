@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Homepage with language alternates -->
+  <url>
+    <loc>https://sofortnetz.de/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sofortnetz.de/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofortnetz.de/en/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://sofortnetz.de/tr/" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://sofortnetz.de/sr/" />
+    <xhtml:link rel="alternate" hreflang="mk" href="https://sofortnetz.de/mk/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofortnetz.de/" />
+    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://sofortnetz.de/en/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sofortnetz.de/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofortnetz.de/en/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://sofortnetz.de/tr/" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://sofortnetz.de/sr/" />
+    <xhtml:link rel="alternate" hreflang="mk" href="https://sofortnetz.de/mk/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofortnetz.de/" />
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://sofortnetz.de/tr/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sofortnetz.de/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofortnetz.de/en/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://sofortnetz.de/tr/" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://sofortnetz.de/sr/" />
+    <xhtml:link rel="alternate" hreflang="mk" href="https://sofortnetz.de/mk/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofortnetz.de/" />
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://sofortnetz.de/sr/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sofortnetz.de/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofortnetz.de/en/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://sofortnetz.de/tr/" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://sofortnetz.de/sr/" />
+    <xhtml:link rel="alternate" hreflang="mk" href="https://sofortnetz.de/mk/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofortnetz.de/" />
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://sofortnetz.de/mk/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sofortnetz.de/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofortnetz.de/en/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://sofortnetz.de/tr/" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://sofortnetz.de/sr/" />
+    <xhtml:link rel="alternate" hreflang="mk" href="https://sofortnetz.de/mk/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofortnetz.de/" />
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <!-- Other Pages -->
+  <url>
+    <loc>https://sofortnetz.de/worldwide.html</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://sofortnetz.de/eu-retail.html</loc>
+    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://sofortnetz.de/partners.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://sofortnetz.de/compatibility.html</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://sofortnetz.de/refund.html</loc>
+    <priority>0.5</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://sofortnetz.de/datenschutz.html</loc>
+    <priority>0.5</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+</urlset>

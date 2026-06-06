@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GT-WB5Q4FPF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'GT-WB5Q4FPF');
+</script>
+    <link rel="icon" type="image/png" href="images/sofortnetz.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="alternate" hreflang="de" href="https://sofortnetz.de/" />
+    <link rel="alternate" hreflang="en" href="https://sofortnetz.de/en/" />
+    <link rel="alternate" hreflang="tr" href="https://sofortnetz.de/tr/" />
+    <link rel="alternate" hreflang="sr" href="https://sofortnetz.de/sr/" />
+    <link rel="alternate" hreflang="mk" href="https://sofortnetz.de/mk/" />
+    <link rel="alternate" hreflang="x-default" href="https://sofortnetz.de/" />
+    <title>Günstigste eSIM Deutschland | 20 GB für 15€ | SofortNetz</title>
+    <meta name="description"
+        content="Deutschlands günstigstes mobiles Internet! 🚀 20 GB Highspeed-Daten für nur 15€. Ohne Vertrag, keine Wartezeit. Sofort-Aktivierung per QR-Code. Jetzt bestellen!">
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load PapaParse for Google Sheets CSV parsing (deferred) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js" defer></script>
+    <!-- Fonts & Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script async src="https://assets.endorsely.com/endorsely.js"
+        data-endorsely="7a433fd3-cb57-4eb3-a927-aa320557d7ef"></script>
+    <!-- Schema.org Structured Data for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SofortNetz.de",
+      "url": "https://sofortnetz.de",
+      "logo": "https://sofortnetz.de/images/sofort_netz.png",
+      "description": "Mobiles Internet Deutschland - Schnelle 5G-Tarife ohne Vertrag, sofort verfügbar mit weltweiter Abdeckung",
+      "sameAs": [
+        "https://www.facebook.com/sofortnetz",
+        "https://www.instagram.com/sofortnetz.de"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "email": "sales@factorydirect.digital"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Mobiles Internet Deutschland",
+      "description": "5G Mobile Internet Service für Deutschland und Ausland. Keine Sim-Karte, kein Vertrag, kein Abonnement erforderlich.",
+      "provider": {
+        "@type": "Organization",
+        "name": "SofortNetz.de"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "DE"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Mobile Internet Tarife",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Mobile Internet 5G Generic",
+            "description": "Schnelles 5G Mobile Internet ohne Vertrag",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "20 GB Highspeed Internet",
+            "description": "20 GB 5G Datenvolumen für 30 Tage. Keine Vertragsbindung, sofort verfügbar.",
+            "price": "15.00",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock",
+            "validFrom": "2024-01-01",
+            "priceValidUntil": "2026-12-31"
+          },
+          {
+            "@type": "Offer",
+            "name": "10 GB Highspeed Internet",
+            "description": "10 GB 5G Datenvolumen für 30 Tage. Perfekt für den Urlaub.",
+            "price": "9.00",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "name": "5 GB Highspeed Internet",
+            "description": "5 GB 5G Datenvolumen für 30 Tage. Ideal für Gelegenheitsnutzer.",
+            "price": "5.00",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "name": "1 GB Highspeed Internet",
+            "description": "1 GB 5G Datenvolumen für 7 Tage. Starter-Paket.",
+            "price": "2.50",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Warum ist die eSIM flexibler als normale SIM-Karten?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mit der eSIM von SofortNetz surfen Sie ohne Vertrag und ohne versteckte Kosten. Sie ist ideal für alle, die sich nicht binden wollen – egal ob für einen Monat oder länger."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie schnell funktioniert die Aktivierung?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die Aktivierung dauert weniger als 5 Minuten. Da es sich um ein rein digitales Produkt handelt, entfällt der Postversand komplett. Bestellen, Code erhalten, scannen – fertig."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ist SofortNetz für Reisende geeignet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, absolut. SofortNetz nutzt die besten Netze (Telekom, Vodafone, O2) für stabile Verbindungen überall in Deutschland. Perfekt als Hotspot oder für Streaming & Workcation ohne deutsche Bürokratie."
+          }
+        }
+      ]
+    }
+    </script>
+    <!-- PromoteKit Script -->
+    <script async src="https://cdn.promotekit.com/promotekit.js"
+        data-promotekit="a69b49ea-285c-4383-a795-2b85daeb6fe9"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(function () {
+                document.querySelectorAll('a[href^="https://buy.stripe.com/"]').forEach(function (link) {
+                    var oldBuyUrl = link.getAttribute("href");
+                    var referralId = window.promotekit_referral;
+                    if (!oldBuyUrl.includes("client_reference_id")) {
+                        var separator = oldBuyUrl.includes("?") ? "&" : "?";
+                        var newBuyUrl = oldBuyUrl + separator + "client_reference_id=" + referralId;
+                        link.setAttribute("href", newBuyUrl);
+                    }
+                });
+
+                document.querySelectorAll("[pricing-table-id]").forEach(function (element) {
+                    element.setAttribute("client-reference-id", window.promotekit_referral);
+                });
+
+                document.querySelectorAll("[buy-button-id]").forEach(function (element) {
+                    element.setAttribute("client-reference-id", window.promotekit_referral);
+                });
+            }, 1500);
+        });
+    </script>
+    <script type="text/javascript" src="https://load.fomo.com/api/v1/3kvZZUiZKU5nddyUA-FLlg/load.js" async></script>
+</head>
+
+<body>
+
+   <div class="marquee-container">
+        <div class="marquee">
+            <span>
+                ⭐ KEINE PHYSISCHE SIM-KARTE ⭐ KEIN VERTRAG ⭐ KEIN ABONNEMENT ⭐ KEINE VERIFIZIERUNG ODER AUSWEISPFLICHT ⭐ MAXIMALE 5G INTERNETGESCHWINDIGKEIT ⭐ SOFORT AKTIVIERT PER QR-CODE ⭐ BESTER PREIS GARANTIERT ⭐ PREPAID ESIM FÜR DEUTSCHLAND ⭐ MOBILES INTERNET FÜR TOURISTEN UND EXPATS ⭐ KEINE ROAMING-GEBÜHREN IN EUROPA ⭐ WELTWEITE ABDECKUNG IN ÜBER 150 LÄNDERN ⭐ BESTE REISE-PAKETE FÜR DIGITALE NOMADEN ⭐ SOFORTIGE FREISCHALTUNG OHNE POST-IDENT ⭐ UNBEGRENZTES SURFEN DANK 3G-FALLBACK ⭐ TOP-NETZQUALITÄT FÜR STABILE VERBINDUNGEN ⭐ REISE-INTERNET OHNE VERSTECKTE KOSTEN ⭐ DIGITALE SIM-KARTE FÜR SMARTPHONES ⭐ FLEXIBLE DATENTARIFE FÜR KURZTRIPS ⭐ 100% ONLINE KAUFEN UND DIREKT SURFEN ⭐
+            </span>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="bg-slate-900 shadow-2xl border-b border-slate-800/80 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-y-3">
+
+                <!-- LOGO + MOBILE FLAGS -->
+                <div class="flex flex-col items-center md:items-start w-full md:w-auto">
+                    <!-- Logo: Large size restored -->
+                    <a href="/" class="flex items-end flex-shrink-0">
+                        <img src="images/sofortnetz.png" alt="SofortNetz.de – Mobiles Internet in Deutschland"
+                            class="w-full max-w-[280px] sm:max-w-[320px] md:max-w-none md:h-20 lg:h-24 md:w-auto">
+                    </a>
+
+                    <!-- Mobile language pills -->
+                    <div class="flex md:hidden mt-3 w-full max-w-[280px] sm:max-w-[320px] justify-around">
+                        <a href="/"
+                            class="px-2.5 py-1 rounded-full text-[10px] font-bold tracking-wide bg-blue-700 text-white shadow-md">DE</a>
+                        <a href="/en/"
+                            class="px-2.5 py-1 rounded-full text-[10px] font-semibold tracking-wide bg-[#497ff5] text-white/90 shadow-sm">EN</a>
+                        <a href="/tr/"
+                            class="px-2.5 py-1 rounded-full text-[10px] font-semibold tracking-wide bg-[#497ff5] text-white/90 shadow-sm">TR</a>
+                        <a href="/sr/"
+                            class="px-2.5 py-1 rounded-full text-[10px] font-semibold tracking-wide bg-[#497ff5] text-white/90 shadow-sm">SR</a>
+                        <a href="/mk/"
+                            class="px-2.5 py-1 rounded-full text-[10px] font-semibold tracking-wide bg-[#497ff5] text-white/90 shadow-sm">MK</a>
+                    </div>
+                </div>
+
+                <!-- DESKTOP MENU -->
+                <nav class="hidden md:flex ml-auto items-center gap-4 sm:gap-6 min-w-0 pb-2">
+                    <a href="#Germany" class="lang-link lang-link-active uppercase tracking-wide">Germany</a>
+                    <a href="#ausland" class="lang-link uppercase tracking-wide">Ausland</a>
+                    <a href="#kompatibilitaet" class="lang-link uppercase tracking-wide">Kompatibilität</a>
+                    <a href="#faq" class="lang-link uppercase tracking-wide">FAQ</a>
+                    <div class="relative group">
+                        <button type="button" class="lang-link inline-flex items-center gap-1 uppercase tracking-wide">
+                            Sprache
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 011.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <div
+                            class="absolute left-0 top-full pt-2 bg-slate-800/95 border border-slate-700 rounded-lg shadow-xl py-2 px-3 opacity-0 invisible translate-y-0 origin-top transition-all duration-200 ease-out pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:visible group-focus-within:pointer-events-auto">
+                            <a href="/index.html"
+                                class="block py-1 px-2 lang-link whitespace-nowrap uppercase tracking-wide">Deutsch</a>
+                            <a href="/en/"
+                                class="block py-1 px-2 lang-link whitespace-nowrap uppercase tracking-wide">English</a>
+                            <a href="/tr/"
+                                class="block py-1 px-2 lang-link whitespace-nowrap uppercase tracking-wide">T&uuml;rkçe</a>
+                            <a href="/sr/"
+                                class="block py-1 px-2 lang-link whitespace-nowrap uppercase tracking-wide">Srpski</a>
+                            <a href="/mk/"
+                                class="block py-1 px-2 lang-link whitespace-nowrap uppercase tracking-wide">Makedonski</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 flex flex-col gap-16 relative z-10">
+
+        <!-- Affiliate Section -->
+        <section class="text-center animate-rise -mb-10">
+            <span class="text-blue-400 font-bold text-lg md:text-3xl animate-pulse hover:text-blue-300 transition-colors">
+                Deutschlands günstigste eSIM – Jetzt mit neuen, noch tieferen Preisen!
+            </span>
+        </section>
+
+        <!-- SECTION 1: German Pricing Grid (Moved to top position, Video removed) -->
+        <section id="Germany" class="mt-4 panel rounded-2xl p-10 shadow-2xl animate-rise">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 text-center">
+                Mobiles Internet Deutschland
+            </h1>
+            <p class="text-slate-400 text-center mb-12 max-w-2xl mx-auto">
+                Die besten 5G-Tarife für Deutschland. Sofort verfügbar, kein Vertrag, volle Geschwindigkeit.
+            </p>
+
+            <!-- Loading Indicator for Plans -->
+            <div id="loading-plans" class="text-center text-blue-400 py-10">
+                <svg class="animate-spin h-8 w-8 mx-auto mb-2" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                    </path>
+                </svg>
+                Lade aktuelle Preise...
+            </div>
+
+            <div id="plan-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Data is injected here by JavaScript -->
+            </div>
+
+            <div class="mt-8 text-center max-w-3xl mx-auto px-4">
+                <p class="text-xs text-slate-500 leading-relaxed">
+                    Hinweis: Die oben angezeigten Preise in Euro sind Schätzungen basierend auf dem aktuellen
+                    Tageswechselkurs. Da unsere Originalpreise intern in USD oder GBP berechnet werden, kann der
+                    tatsächliche Endbetrag auf Ihrer Abrechnung beim Checkout geringfügig variieren. Sie sehen den
+                    verbindlichen Endpreis vor Abschluss der Zahlung.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Value Proposition Section -->
+        <section class="text-center panel p-10 rounded-2xl shadow-2xl border border-slate-700/80 animate-rise delay-1">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">
+                Warum SofortNetz?
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                <!-- Feature 1 -->
+                <div
+                    class="p-6 bg-slate-700/50 border border-blue-600 rounded-xl shadow-lg flex flex-col items-center hover:bg-slate-700 transition duration-300 feature-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" class="w-10 h-10 text-blue-400 mb-3">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5a.75.75 0 0 1 .75.75v9a.75.75 0 0 1-.75.75H3.75A.75.75 0 0 1 3 16.5v-9a.75.75 0 0 1 .75-.75Z" />
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m3.75 7.5 7.2 4.5c.654.409 1.446.409 2.1 0l7.2-4.5" />
+                    </svg>
+                    <h3 class="text-lg font-bold text-white mb-1">Sofort-Aktivierung</h3>
+                    <p class="text-sm text-slate-400">Nach der Zahlung erhältst du deinen eSIM-QR-Code sofort per
+                        E-Mail.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div
+                    class="p-6 bg-slate-700/50 border border-blue-600 rounded-xl shadow-lg flex flex-col items-center hover:bg-slate-700 transition duration-300 feature-card delay-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" class="w-10 h-10 text-blue-400 mb-3">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m16.862 3.487 2.651 2.651a1.875 1.875 0 0 1 0 2.652l-8.486 8.486a1.5 1.5 0 0 1-.603.363l-3.27.98a.75.75 0 0 1-.927-.928l.98-3.27a1.5 1.5 0 0 1 .363-.603l8.486-8.486a1.875 1.875 0 0 1 2.652 0Z" />
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M18 13.5V18A1.5 1.5 0 0 1 16.5 19.5h-9A1.5 1.5 0 0 1 6 18V6.75A1.5 1.5 0 0 1 7.5 5.25H12" />
+                    </svg>
+                    <h3 class="text-lg font-bold text-white mb-1">Kein Vertrag</h3>
+                    <p class="text-sm text-slate-400">Du kaufst nur das Datenpaket, das du wirklich brauchst. Keine
+                        Bindung.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div
+                    class="p-6 bg-slate-700/50 border border-blue-600 rounded-xl shadow-lg flex flex-col items-center hover:bg-slate-700 transition duration-300 feature-card delay-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" class="w-10 h-10 text-blue-400 mb-3">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.25 6.75h-5.25a3.75 3.75 0 0 0-3.54 2.25" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 12h8.25" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 15h8.25" />
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M8.46 17.75h5.79a3.75 3.75 0 0 0 3.54-2.25" />
+                    </svg>
+                    <h3 class="text-lg font-bold text-white mb-1">Beste Preise</h3>
+                    <p class="text-sm text-slate-400">Wir kombinieren die attraktivsten eSIM-Tarife für Germany.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Compatibility Check Section -->
+        <section id="kompatibilitaet" class="max-w-3xl mx-auto px-4 animate-rise delay-2">
+            <div class="panel p-8 rounded-2xl shadow-2xl border border-slate-600 text-center">
+                <h3 class="text-2xl font-bold text-white mb-4">Ist mein Handy eSIM-fähig?</h3>
+                <p class="text-slate-300 mb-6">
+                    Gib dein Smartphone-Modell ein (z. B. „iPhone 13“, „Galaxy S24“ oder „Pixel 8“),
+                    wähle aus der Liste – und prüfe die Kompatibilität.
+                </p>
+
+                <div class="relative max-w-lg mx-auto text-left">
+                    <input type="text" id="deviceInput" placeholder="Modell suchen..." autocomplete="off"
+                        class="w-full py-3 px-5 rounded-full bg-slate-900 border border-slate-600 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/50 transition duration-200">
+
+                    <!-- Suggestions Dropdown -->
+                    <div id="suggestions"
+                        class="absolute left-0 right-0 mt-1 bg-slate-800 border border-slate-600 rounded-lg shadow-xl z-50 max-h-60 overflow-y-auto hidden">
+                        <!-- Items will be injected via JavaScript -->
+                    </div>
+
+                    <button onclick="checkCompatibility()"
+                        class="hidden md:inline-flex items-center justify-center absolute inset-y-1 right-1 bg-blue-600 hover:bg-blue-700 text-white rounded-full px-6 font-medium leading-none transition duration-200">
+                        Pr&uuml;fen
+                    </button>
+                </div>
+
+                <!-- Mobile button -->
+                <button onclick="checkCompatibility()"
+                    class="mt-3 w-full md:hidden bg-blue-600 hover:bg-blue-700 text-white rounded-full py-3 font-semibold transition duration-200">
+                    Pr&uuml;fen
+                </button>
+
+                <div id="checkResult" class="mt-4 min-h-[1.5rem] font-semibold text-center"></div>
+
+                <p class="text-xs text-slate-500 mt-4 text-center">
+                    Tipp: Die meisten neueren iPhones, Galaxy S und Google Pixel unterstützen eSIM.
+                    Im Zweifel schau in den Einstellungen unter „Mobilfunk“ > „eSIM hinzufügen“ nach.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Other Countries Pricing Grid -->
+        <section id="ausland" class="pt-8 border-t border-slate-800 animate-rise">
+            <h2 class="text-3xl font-bold text-white mb-8 text-center">Andere Länder & Regionen</h2>
+
+            <div id="loading-plans-global" class="text-center text-blue-400 py-10">
+                <svg class="animate-spin h-8 w-8 mx-auto mb-2" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                    </path>
+                </svg>
+                Lade internationale Tarife...
+            </div>
+
+            <div id="plan-grid-global" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Global Data is injected here by JavaScript -->
+            </div>
+
+            <div class="mt-8 text-center max-w-3xl mx-auto px-4">
+                <p class="text-xs text-slate-500 leading-relaxed">
+                    Hinweis: Die oben angezeigten Preise in Euro sind Schätzungen basierend auf dem aktuellen
+                    Tageswechselkurs. Da unsere Originalpreise intern in USD oder GBP berechnet werden, kann der
+                    tatsächliche Endbetrag auf Ihrer Abrechnung beim Checkout geringfügig variieren. Sie sehen den
+                    verbindlichen Endpreis vor Abschluss der Zahlung.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 6: How it Works Section -->
+        <section class="mt-20 animate-rise delay-1">
+            <h2 class="text-3xl font-bold text-white mb-8 text-center">Wie es Funktioniert (3 Schritte)</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="panel p-6 rounded-xl shadow-lg border-t-4 border-blue-500 feature-card">
+                    <div class="text-4xl font-extrabold text-blue-400 mb-3">1.</div>
+                    <h3 class="text-xl font-semibold mb-2 text-white">Wählen & Kaufen</h3>
+                    <p class="text-slate-400">Wählen Sie Ihr Datenpaket. Sie erhalten den eSIM QR-Code sofort per
+                        E-Mail.</p>
+                </div>
+                <div class="panel p-6 rounded-xl shadow-lg border-t-4 border-blue-500 feature-card delay-1">
+                    <div class="text-4xl font-extrabold text-blue-400 mb-3">2.</div>
+                    <h3 class="text-xl font-semibold mb-2 text-white">Scannen & Installieren</h3>
+                    <p class="text-slate-400">Scannen Sie den QR-Code mit Ihrem eSIM-fähigen Smartphone. Die
+                        Installation ist in Sekunden abgeschlossen.</p>
+                </div>
+                <div class="panel p-6 rounded-xl shadow-lg border-t-4 border-blue-500 feature-card delay-2">
+                    <div class="text-4xl font-extrabold text-blue-400 mb-3">3.</div>
+                    <h3 class="text-xl font-semibold mb-2 text-white">Sofort Surfen</h3>
+                    <p class="text-slate-400">Aktivieren Sie die eSIM in Germany und genießen Sie sofort High-Speed
+                        Mobile Internet.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: FAQ Section -->
+        <section id="faq" class="max-w-5xl mx-auto px-4 mb-20 animate-rise delay-2">
+            <h2 class="text-3xl font-bold text-white mb-10 text-center">Häufig gestellte Fragen (FAQ)</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Question 1 -->
+                <div class="panel p-6 rounded-xl border border-slate-700 feature-card">
+                    <div class="flex items-center mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6 text-blue-400 mr-3 flex-shrink-0">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+                        <h3 class="text-xl font-semibold text-blue-400">Wie lange ist mein QR-Code gültig?</h3>
+                    </div>
+                    <p class="text-slate-300">Ihr eSIM QR-Code ist nach dem Kauf <strong>180 Tage</strong> lang gültig
+                        (Pre-Activation Validity). Sie können den Tarif also bequem im Voraus kaufen und erst bei Ihrer
+                        Ankunft in Germany aktivieren.</p>
+                </div>
+                <!-- Question 2 -->
+                <div class="panel p-6 rounded-xl border border-slate-700 feature-card delay-1">
+                    <div class="flex items-center mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6 text-blue-400 mr-3 flex-shrink-0">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+                        </svg>
+                        <h3 class="text-xl font-semibold text-blue-400">Ist das Datenvolumen aufladbar?</h3>
+                    </div>
+                    <p class="text-slate-300">Ja! Unsere Datentarife sind <strong>aufladbar (Reloadable)</strong>.
+                        Solange Ihre eSIM aktiv ist, können Sie jederzeit zusätzliches Datenvolumen nachbuchen.</p>
+                </div>
+                <!-- Question 3 -->
+                <div class="panel p-6 rounded-xl border border-slate-700 feature-card delay-2">
+                    <div class="flex items-center mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6 text-blue-400 mr-3 flex-shrink-0">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+                        </svg>
+                        <h3 class="text-xl font-semibold text-blue-400">Wann beginnt die Laufzeit?</h3>
+                    </div>
+                    <p class="text-slate-300">Die Laufzeit startet erst bei der ersten Einwahl ins Netz (Aktivierung in
+                        Germany).</p>
+                </div>
+                <!-- Question 4 -->
+                <div class="panel p-6 rounded-xl border border-slate-700 feature-card delay-3">
+                    <div class="flex items-center mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6 text-blue-400 mr-3 flex-shrink-0">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Zm6-10.125a1.875 1.875 0 1 1-3.75 0 1.875 1.875 0 0 1 3.75 0Zm1.294 6.336a6.721 6.721 0 0 1-3.17.789 6.721 6.721 0 0 1-3.168-.789 3.376 3.376 0 0 1 6.338 0Z" />
+                        </svg>
+                        <h3 class="text-xl font-semibold text-blue-400">Muss ich mich ausweisen?</h3>
+                    </div>
+                    <p class="text-slate-300">Nein. Keine Identitätsprüfung (Video-Ident) notwendig.</p>
+                </div>
+                <!-- Question 5 -->
+                <div class="panel p-6 rounded-xl border border-slate-700 feature-card delay-1">
+                    <div class="flex items-center mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6 text-blue-400 mr-3 flex-shrink-0">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 0 1-1.161.886l-.143.048a1.107 1.107 0 0 0-.57 1.664c.369.555.169 1.307-.413 1.68l-1.225.956a1.5 1.5 0 0 0-.499 1.168V15a3 3 0 0 0 3 3h.375a2.25 2.25 0 0 1 2.25 2.25V21m-9-6a2.25 2.25 0 0 0-2.25 2.25V21m3-2.25V18.75a2.25 2.25 0 0 1 2.25-2.25h1.312c.417 0 .825.126 1.178.365l.552.368a1.5 1.5 0 0 0 1.657 0l.552-.368a3.004 3.004 0 0 1 3.253 0l2.715 1.81" />
+                        </svg>
+                        <h3 class="text-xl font-semibold text-blue-400">Bieten Sie auch Tarife für andere Länder?</h3>
+                    </div>
+                    <p class="text-slate-300">Ja! Wir bieten eSIM-Tarife für über <strong>150 Länder und
+                            Regionen</strong> weltweit an. Ideal für Ihren nächsten Urlaub oder Ihre Geschäftsreise.</p>
+                </div>
+                <!-- Question 6 -->
+                <div class="panel p-6 rounded-xl border border-slate-700 feature-card delay-2">
+                    <div class="flex items-center mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6 text-blue-400 mr-3 flex-shrink-0">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z" />
+                        </svg>
+                        <h3 class="text-xl font-semibold text-blue-400">Gibt es regionale Pakete?</h3>
+                    </div>
+                    <p class="text-slate-300">Selbstverständlich. Wir führen auch regionale Pakete (z.B. Europa, Asien).
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 8: eSIM Details Section -->
+        <section id="esim-details" class="mt-20 animate-rise delay-3">
+            <div class="max-w-7xl mx-auto px-4">
+                <div
+                    class="panel p-8 md:p-12 rounded-3xl shadow-2xl border border-slate-700/80 bg-slate-800/40 backdrop-blur-sm">
+                    <h2 class="text-3xl md:text-5xl font-bold text-white mb-6 text-center tracking-tight">
+                        Mobiles Internet in Deutschland:<br /><span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Warum die
+                            eSIM die Zukunft ist</span>
+                    </h2>
+                    <p class="text-slate-300 mb-12 leading-relaxed text-center max-w-3xl mx-auto text-lg text-balance">
+                        Suchen Sie nach einer schnellen und flexiblen Möglichkeit, in Deutschland online zu gehen?
+                        Schluss mit Warten auf Techniker oder Post. Mit SofortNetz nutzen Sie die modernste Technologie:
+                        <strong>die eSIM</strong>.
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Card 1: Flexibility -->
+                        <div
+                            class="bg-slate-700/30 border border-slate-600/50 rounded-2xl p-8 hover:bg-slate-700/50 transition-all duration-300 group hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-900/10">
+                            <div
+                                class="w-14 h-14 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-blue-500/10">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-blue-400" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M13.5 10.5V6.75a4.5 4.5 0 1 1 9 0v3.75M3.75 21.75h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H3.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-4">Maximale Flexibilität</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                                Internet ohne Vertrag. Keine versteckten Kosten. Ideal für alle, die sich nicht binden
+                                wollen – ob für einen Monat oder länger.
+                            </p>
+                            <div
+                                class="text-sm font-semibold text-blue-100 bg-blue-500/10 py-2 px-3 rounded-lg border border-blue-500/20 inline-block">
+                                Bestseller: 20 GB für 15€
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Activation -->
+                        <div
+                            class="bg-slate-700/30 border border-slate-600/50 rounded-2xl p-8 hover:bg-slate-700/50 transition-all duration-300 group hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-900/10">
+                            <div
+                                class="w-14 h-14 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-blue-500/10">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-blue-400" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-4">Aktivierung in 5 Min.</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                                Der Wechsel ist kinderleicht. Da es ein rein digitales Produkt ist, entfällt der
+                                Postversand komplett.
+                            </p>
+                            <ul class="text-sm space-y-3 text-slate-300">
+                                <li class="flex items-center gap-3">
+                                    <span
+                                        class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center text-xs font-bold text-blue-400">1</span>
+                                    <span><strong>Bestellen:</strong> Paket wählen.</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span
+                                        class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center text-xs font-bold text-blue-400">2</span>
+                                    <span><strong>Email:</strong> QR-Code erhalten.</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span
+                                        class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center text-xs font-bold text-blue-400">3</span>
+                                    <span><strong>Scannen:</strong> Sofort online.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Card 3: Travelers -->
+                        <div
+                            class="bg-slate-700/30 border border-slate-600/50 rounded-2xl p-8 hover:bg-slate-700/50 transition-all duration-300 group hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-900/10">
+                            <div
+                                class="w-14 h-14 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-blue-500/10">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-blue-400" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 0 1-1.161.886l-.143.048a1.107 1.107 0 0 0-.57 1.664c.369.555.169 1.307-.413 1.68l-1.225.956a1.5 1.5 0 0 0-.499 1.168V15a3 3 0 0 0 3 3h.375a2.25 2.25 0 0 1 2.25 2.25V21m-9-6a2.25 2.25 0 0 0-2.25 2.25V21m3-2.25V18.75a2.25 2.25 0 0 1 2.25-2.25h1.312c.417 0 .825.126 1.178.365l.552.368a1.5 1.5 0 0 0 1.657 0l.552-.368a3.004 3.004 0 0 1 3.253 0l2.715 1.81" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-4">Reisende & Nomaden</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                                Deutschland ohne Bürokratie. Nutzen Sie die besten Netze (Telekom, Vodafone, O2
+                                Qualität) für stabile 4G/5G-Verbindungen von Berlin bis München.
+                            </p>
+                            <p class="text-slate-300 text-sm font-medium border-t border-slate-700/50 pt-4 mt-auto">
+                                Perfekt als Hotspot oder für Streaming & Workcation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Cookie Consent -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="flex flex-col gap-3 md:flex-row md:items-center md:gap-4">
+            <div class="flex-1 text-sm text-slate-200">
+                Wir verwenden Cookies für essentielle Funktionen und um unsere Seite zu verbessern. Details findest du
+                in unserer <a href="datenschutz.html"
+                    class="text-blue-300 underline hover:text-blue-200">Datenschutzerklärung</a>.
+            </div>
+            <div class="cookie-banner__actions">
+                <button id="cookie-decline" class="cookie-btn secondary">Nur notwendige</button>
+                <button id="cookie-accept" class="cookie-btn primary">Alle akzeptieren</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-black/50 text-white text-center">
+        <!-- Logo -->
+        <div class="mb-6 flex justify-center">
+            <a href="/" class="flex-shrink-0">
+                <img src="images/sofortnetz.png" alt="SofortNetz.de – Mobile Internet" class="h-10 md:h-12 w-auto">
+            </a>
+        </div>
+
+        <p class="text-sm mb-2">© 2025 SofortNetz.de | Mobiles Internet Deutschland.</p>
+        <p class="text-xs text-slate-400 mb-4">Powered by eSIM Technology (Mobile Internet, Kein Vertrag).</p>
+
+        <!-- Payment Methods Image -->
+        <div class="flex justify-center mb-6 mt-4">
+            <img src="images/payments.png" alt="Sichere Zahlungsmethoden" class="h-12 sm:h-16 w-auto opacity-100"
+                onerror="this.style.display='none'">
+        </div>
+
+        <!-- Social Media Links (Desktop) -->
+        <div class="hidden md:flex justify-center space-x-4 mb-8">
+            <a href="https://www.tiktok.com/@sofortnetz.de" target="_blank" rel="noopener noreferrer"
+                class="flex items-center justify-center h-10 w-10 rounded-full bg-slate-800 hover:bg-blue-600 border border-slate-700 hover:border-blue-500 text-white transition-all duration-300 shadow-lg group">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                    class="w-5 h-5 group-hover:scale-110 transition-transform">
+                    <path
+                        d="M12.75 0h-2.1a.65.65 0 0 0-.65.65v13.8a2.15 2.15 0 1 1-1.65-2.09.65.65 0 0 0 .5-.63V9.35a.65.65 0 0 0-.76-.64A5.35 5.35 0 1 0 13.5 14V6.16a7 7 0 0 0 3.5 1.19.65.65 0 0 0 .7-.65V4.8a.65.65 0 0 0-.65-.65 2.8 2.8 0 0 1-2.8-2.8.65.65 0 0 0-.65-.65Z" />
+                </svg>
+                <span class="sr-only">TikTok</span>
+            </a>
+            <a href="https://www.facebook.com/SofortNetz" target="_blank" rel="noopener noreferrer"
+                class="flex items-center justify-center h-10 w-10 rounded-full bg-slate-800 hover:bg-blue-600 border border-slate-700 hover:border-blue-500 text-white transition-all duration-300 shadow-lg group">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                    class="w-5 h-5 group-hover:scale-110 transition-transform">
+                    <path
+                        d="M22.675 0h-21.35C.596 0 0 .597 0 1.333v21.334C0 23.403.596 24 1.325 24h11.495v-9.294H9.847v-3.622h2.973V8.413c0-2.94 1.793-4.544 4.414-4.544 1.255 0 2.335.093 2.649.135v3.07l-1.819.001c-1.428 0-1.704.679-1.704 1.674v2.195h3.406l-.444 3.622h-2.962V24h5.805C23.404 24 24 23.403 24 22.667V1.333C24 .597 23.404 0 22.675 0z" />
+                </svg>
+                <span class="sr-only">Facebook</span>
+            </a>
+            <a href="https://www.instagram.com/sofortnetz.de" target="_blank" rel="noopener noreferrer"
+                class="flex items-center justify-center h-10 w-10 rounded-full bg-slate-800 hover:bg-blue-600 border border-slate-700 hover:border-blue-500 text-white transition-all duration-300 shadow-lg group">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class="w-6 h-6 group-hover:scale-110 transition-transform">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 7.5c1.657 0 3 1.343 3 3S13.657 13.5 12 13.5 9 12.157 9 10.5 10.343 7.5 12 7.5Z" />
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M4.5 10.5c0 5.25 3.75 7.5 7.5 7.5s7.5-2.25 7.5-7.5S16.75 3 12 3 4.5 5.25 4.5 10.5Z" />
+                </svg>
+                <span class="sr-only">Instagram</span>
+            </a>
+            <a href="https://wa.me/+447451285419" target="_blank" rel="noopener noreferrer" title="Order on WhatsApp" aria-label="Order on WhatsApp"
+                class="flex items-center justify-center h-10 w-10 rounded-full bg-slate-800 hover:bg-blue-600 border border-slate-700 hover:border-blue-500 text-white transition-all duration-300 shadow-lg group">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                    class="w-5 h-5 group-hover:scale-110 transition-transform">
+                    <path
+                        d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.96C.16 5.307 5.268.199 11.533.199c3.17 0 6.167 1.237 8.413 3.484a11.82 11.82 0 013.481 8.412c-.003 6.266-5.112 11.373-11.378 11.373a11.9 11.9 0 01-5.943-1.53L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.003 1.593 4.943.003 8.964-4.013 8.967-8.957.002-4.944-4.011-8.964-8.955-8.967-4.944-.003-8.964 4.011-8.967 8.955a8.93 8.93 0 001.544 5.023l-.999 3.648 3.407-1.295zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.149-.173.198-.297.297-.496.099-.198.05-.372-.025-.521-.074-.149-.669-1.611-.916-2.207-.242-.579-.487-.501-.669-.51-.173-.009-.372-.011-.57-.011-.198 0-.521.074-.793.372-.272.297-1.04 1.016-1.04 2.479 0 1.463 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z" />
+                </svg>
+                <span class="sr-only">Order on WhatsApp</span>
+            </a>
+        </div>
+
+        <!-- Links -->
+        <div class="mt-4 flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-4">
+            <a href="datenschutz.html" class="footer-link uppercase tracking-wider">DATENSCHUTZRICHTLINIE</a>
+            <span class="footer-link hidden md:inline">–</span>
+            <a href="refund.html" class="footer-link uppercase tracking-wider">RÜCKERSTATTUNGSRICHTLINIE</a>
+            <span class="footer-link hidden md:inline">–</span>
+            <a href="https://wa.me/+447451285419" class="footer-link uppercase tracking-wider">LIVE-SUPPORT</a>
+        </div>
+    </footer>
+
+    <!-- Mobile social/audio bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-50">
+        <div class="bg-slate-900 border-t border-slate-700">
+            <div class="max-w-7xl mx-auto px-4 py-2 grid grid-cols-5 gap-3 items-center justify-items-center">
+                <a href="https://www.tiktok.com/@sofortnetz.de"
+                    class="flex items-center justify-center h-9 w-9 rounded-full bg-blue-600/90 border border-blue-500 text-white shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+                        <path
+                            d="M12.75 0h-2.1a.65.65 0 0 0-.65.65v13.8a2.15 2.15 0 1 1-1.65-2.09.65.65 0 0 0 .5-.63V9.35a.65.65 0 0 0-.76-.64A5.35 5.35 0 1 0 13.5 14V6.16a7 7 0 0 0 3.5 1.19.65.65 0 0 0 .7-.65V4.8a.65.65 0 0 0-.65-.65 2.8 2.8 0 0 1-2.8-2.8.65.65 0 0 0-.65-.65Z" />
+                    </svg>
+                    <span class="sr-only">TikTok</span>
+                </a>
+                <a href="https://www.facebook.com/SofortNetz"
+                    class="flex items-center justify-center h-9 w-9 rounded-full bg-blue-600/90 border border-blue-500 text-white shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-4 h-4">
+                        <path
+                            d="M22.675 0h-21.35C.596 0 0 .597 0 1.333v21.334C0 23.403.596 24 1.325 24h11.495v-9.294H9.847v-3.622h2.973V8.413c0-2.94 1.793-4.544 4.414-4.544 1.255 0 2.335.093 2.649.135v3.07l-1.819.001c-1.428 0-1.704.679-1.704 1.674v2.195h3.406l-.444 3.622h-2.962V24h5.805C23.404 24 24 23.403 24 22.667V1.333C24 .597 23.404 0 22.675 0z" />
+                    </svg>
+                    <span class="sr-only">Facebook</span>
+                </a>
+                <a href="https://www.instagram.com/sofortnetz.de"
+                    class="flex items-center justify-center h-9 w-9 rounded-full bg-blue-600/90 border border-blue-500 text-white shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 7.5c1.657 0 3 1.343 3 3S13.657 13.5 12 13.5 9 12.157 9 10.5 10.343 7.5 12 7.5Z" />
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 10.5c0 5.25 3.75 7.5 7.5 7.5s7.5-2.25 7.5-7.5S16.75 3 12 3 4.5 5.25 4.5 10.5Z" />
+                    </svg>
+                    <span class="sr-only">Instagram</span>
+                </a>
+                <a href="https://wa.me/+447451285419"
+                    class="flex items-center justify-center h-9 w-9 rounded-full bg-blue-600/90 border border-blue-500 text-white shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-4 h-4">
+                        <path
+                            d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.96C.16 5.307 5.268.199 11.533.199c3.17 0 6.167 1.237 8.413 3.484a11.82 11.82 0 013.481 8.412c-.003 6.266-5.112 11.373-11.378 11.373a11.9 11.9 0 01-5.943-1.53L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.003 1.593 4.943.003 8.964-4.013 8.967-8.957.002-4.944-4.011-8.964-8.955-8.967-4.944-.003-8.964 4.011-8.967 8.955a8.93 8.93 0 001.544 5.023l-.999 3.648 3.407-1.295zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.149-.173.198-.297.297-.496.099-.198.05-.372-.025-.521-.074-.149-.669-1.611-.916-2.207-.242-.579-.487-.501-.669-.51-.173-.009-.372-.011-.57-.011-.198 0-.521.074-.793.372-.272.297-1.04 1.016-1.04 2.479 0 1.463 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z" />
+                    </svg>
+                    <span class="sr-only">WhatsApp</span>
+                </a>
+                <button id="music-toggle-mobile"
+                    class="flex items-center justify-center h-9 w-9 rounded-full bg-blue-600/90 border border-blue-500 text-white shadow-lg">
+                    <svg id="icon-play-mobile" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="2" stroke="currentColor" class="w-4 h-4">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+                    </svg>
+                    <svg id="icon-pause-mobile" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="2" stroke="currentColor" class="w-4 h-4 hidden">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25v13.5m-7.5-13.5v13.5" />
+                    </svg>
+                    <span class="sr-only">Play</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <audio id="bg-audio" src="audio/sofortnetz1.mp3" preload="auto" loop></audio>
+
+    <script>
+        // DEVICE LIST & SEARCH LOGIC
+        const compatibleDevices = [
+            "iPhone 16", "iPhone 16 Pro", "iPhone 15", "iPhone 14", "iPhone 13", "iPhone 12", "iPhone 11", "iPhone XS", "iPhone XR", "iPhone SE (2020)",
+            "Samsung Galaxy S25", "Samsung Galaxy S24", "Samsung Galaxy S23", "Samsung Galaxy S22", "Samsung Galaxy S21", "Samsung Galaxy S20", "Samsung Note 20", "Samsung Z Flip", "Samsung Z Fold",
+            "Google Pixel 9", "Google Pixel 8", "Google Pixel 7", "Google Pixel 6", "Google Pixel 5", "Google Pixel 4",
+            "Xiaomi 15", "Xiaomi 14", "Xiaomi 13", "Xiaomi 12", "Xiaomi Redmi Note",
+            "Motorola Razr", "Motorola Edge", "Motorola Moto G",
+            "Oppo Find X3", "Oppo Reno 6",
+            "iPad Pro", "iPad Air", "iPad Mini", "iPad"
+        ];
+
+        const deviceInput = document.getElementById('deviceInput');
+        const suggestionsBox = document.getElementById('suggestions');
+        const resultDiv = document.getElementById('checkResult');
+
+        function showSuggestions() {
+            const input = deviceInput.value.toLowerCase().trim();
+            suggestionsBox.innerHTML = '';
+            if (input.length < 2) { suggestionsBox.classList.add('hidden'); return; }
+
+            const terms = input.split(/\s+/);
+            const matches = compatibleDevices.filter(dev => terms.every(t => dev.toLowerCase().includes(t)));
+
+            if (matches.length > 0) {
+                matches.forEach(dev => {
+                    const div = document.createElement('div');
+                    div.textContent = dev;
+                    div.className = "px-5 py-3 cursor-pointer hover:bg-slate-700 text-slate-300 border-b border-slate-700 last:border-0";
+                    div.onclick = () => selectDevice(dev);
+                    suggestionsBox.appendChild(div);
+                });
+                suggestionsBox.classList.remove('hidden');
+            } else {
+                suggestionsBox.classList.add('hidden');
+            }
+        }
+
+        function selectDevice(name) {
+            deviceInput.value = name;
+            suggestionsBox.classList.add('hidden');
+            resultDiv.innerHTML = `<span class="text-green-400 font-bold">Ja! ${name} ist kompatibel.</span>`;
+        }
+
+        function checkCompatibility() {
+            const input = deviceInput.value.trim();
+            if (!input) return;
+            selectDevice(input); // Simplified check for now
+        }
+
+        if (deviceInput) {
+            deviceInput.addEventListener('input', showSuggestions);
+            deviceInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') checkCompatibility(); });
+        }
+
+        // GOOGLE SHEET & PRICING
+        const GOOGLE_SHEET_URL = "https://docs.google.com/spreadsheets/d/12L5n1f1kD5GZe_50G7H1dCGAwCdIkdFZBoGdVUCfCqY/gviz/tq?tqx=out:csv";
+        const GOOGLE_SHEET_URL_GLOBAL = "https://docs.google.com/spreadsheets/d/1BravjVO4QyFfj3EN69aEF8NhxeCZ5wAVqsx1ReiZjTs/gviz/tq?tqx=out:csv";
+
+        function createPlanCard(plan) {
+            // Use the exact price provided (no conversion)
+            const priceRaw = (plan.price || "").toString().trim();
+            let displayPrice = priceRaw;
+            // If it looks like a number, normalize to two decimals for consistency
+            const numeric = parseFloat(priceRaw.replace(',', '.'));
+            if (!isNaN(numeric)) {
+                displayPrice = numeric.toFixed(2).replace('.', ',');
+            }
+
+            const highlightClass = plan.highlight ? "glow-card border border-sky-400/70" : "panel border border-slate-700/60";
+
+            const div = document.createElement('div');
+            div.className = `flex flex-col items-center p-6 rounded-xl ${highlightClass} relative transition duration-300 hover:scale-[1.02] hover:-translate-y-1`;
+
+            div.innerHTML = `
+                ${plan.highlight ? '<div class="absolute top-0 right-0 bg-yellow-400 text-gray-900 text-xs font-bold px-3 py-1 rounded-bl-xl rounded-tr-xl">Tipp</div>' : ''}
+                <div class="text-3xl font-bold mb-1 ${plan.highlight ? 'text-yellow-300' : 'text-blue-400'} tracking-tight leading-tight">${plan.gb} GB</div>
+                <div class="text-xl font-semibold mb-4 text-slate-400">${plan.days} Tage</div>
+                <div class="text-[10px] font-semibold text-slate-200 text-center whitespace-nowrap tracking-normal">${plan.description}</div>
+                <div class="flex flex-col items-center mt-6">
+                    <span class="text-5xl font-extrabold text-white">€${displayPrice}</span>
+                </div>
+                <a href="${plan.stripe_link}" class="btn-primary w-full py-3 rounded-xl font-bold text-white uppercase mt-4 text-lg text-center">Jetzt kaufen & aktivieren</a>
+                <div class="text-xs mt-3 ${plan.highlight ? 'text-white/80' : 'text-slate-500'}">QR-Code wird sofort per E-Mail zugestellt</div>
+            `;
+            return div;
+        }
+
+        async function fetchAndRender(url, containerId, loadingId) {
+            try {
+                const res = await fetch(url);
+                if (!res.ok) throw new Error("Fetch failed");
+                const txt = await res.text();
+
+                Papa.parse(txt, {
+                    header: true,
+                    complete: (results) => {
+                        const plans = results.data.map(row => ({
+                            gb: row['GB'] || row['gb'],
+                            days: row['Days'] || row['days'],
+                            description: row['Description'] || row['description'],
+                            price: row['Price (EUR)'] || row['Price'] || row['price'],
+                            highlight: (row['Highlight?'] === 'TRUE' || row['Highlight'] === 'TRUE'),
+                            stripe_link: row['Stripe Link'] || row['stripe_link']
+                        })).filter(p => p.gb);
+
+                        const grid = document.getElementById(containerId);
+                        grid.innerHTML = '';
+                        plans.forEach(p => grid.appendChild(createPlanCard(p)));
+                        document.getElementById(loadingId).classList.add('hidden');
+                    }
+                });
+            } catch (e) { console.error(e); }
+        }
+
+        async function init() {
+            fetchAndRender(GOOGLE_SHEET_URL, 'plan-grid', 'loading-plans');
+            fetchAndRender(GOOGLE_SHEET_URL_GLOBAL, 'plan-grid-global', 'loading-plans-global');
+
+            // Audio init only on mobile
+            if (window.matchMedia('(max-width: 767px)').matches) {
+                const audio = document.getElementById('bg-audio');
+                const btnMobile = document.getElementById('music-toggle-mobile');
+                const iconPlayMobile = document.getElementById('icon-play-mobile');
+                const iconPauseMobile = document.getElementById('icon-pause-mobile');
+                let isPlaying = false;
+
+                function updateIcons(playing) {
+                    if (iconPlayMobile && iconPauseMobile) {
+                        iconPlayMobile.classList.toggle('hidden', playing);
+                        iconPauseMobile.classList.toggle('hidden', !playing);
+                    }
+                    if (btnMobile) btnMobile.classList.toggle('music-playing', playing);
+                }
+
+                function handleToggle(e) {
+                    if (e) e.stopPropagation();
+                    if (audio) {
+                        if (isPlaying) {
+                            audio.pause();
+                            isPlaying = false;
+                        } else {
+                            audio.play();
+                            isPlaying = true;
+                        }
+                        updateIcons(isPlaying);
+                    }
+                }
+                if (btnMobile) btnMobile.onclick = handleToggle;
+
+                document.addEventListener('click', () => {
+                    if (!isPlaying && audio) {
+                        audio.play().then(() => {
+                            isPlaying = true;
+                            updateIcons(true);
+                        }).catch(() => { });
+                    }
+                }, { once: true });
+
+                updateIcons(false);
+            }
+
+            // Cookie banner
+            const consentKey = 'sn_cookie_consent';
+            const banner = document.getElementById('cookie-banner');
+            const acceptBtn = document.getElementById('cookie-accept');
+            const declineBtn = document.getElementById('cookie-decline');
+
+            function hideBanner() {
+                if (banner) banner.style.display = 'none';
+            }
+            function showBanner() {
+                if (banner) banner.style.display = 'block';
+            }
+            function setConsent(value) {
+                const payload = { value, ts: Date.now() };
+                localStorage.setItem(consentKey, JSON.stringify(payload));
+                hideBanner();
+            }
+            if (banner && acceptBtn && declineBtn) {
+                const saved = localStorage.getItem(consentKey);
+                if (!saved) showBanner();
+                acceptBtn.onclick = () => setConsent('accepted');
+                declineBtn.onclick = () => setConsent('declined');
+            }
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>

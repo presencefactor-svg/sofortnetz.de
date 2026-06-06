@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SofortNetz.de | eSIM-Kompatibilität prüfen</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font family -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Deep blue background */
+            color: #f8fafc; /* Light default text color */
+            overflow-x: hidden; 
+        }
+        /* Custom gradient for buttons */
+        .btn-primary {
+            background-image: linear-gradient(to right, #3b82f6, #1d4ed8);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-image: linear-gradient(to right, #1d4ed8, #3b82f6);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        }
+        /* Marquee Styling */
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+            width: 100%;
+        }
+        .marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 30s linear infinite;
+        }
+        @keyframes marquee {
+            0%   { transform: translate(0, 0); }
+            100% { transform: translate(-100%, 0); }
+        }
+        /* Scrollbar for suggestions list */
+        #suggestions::-webkit-scrollbar {
+            width: 8px;
+        }
+        #suggestions::-webkit-scrollbar-track {
+            background: #1e293b; 
+        }
+        #suggestions::-webkit-scrollbar-thumb {
+            background: #475569; 
+            border-radius: 4px;
+        }
+        #suggestions::-webkit-scrollbar-thumb:hover {
+            background: #64748b; 
+        }
+        .footer-link {
+            font-size: 0.75rem; 
+            color: #94a3b8;
+            transition: color 0.2s;
+        }
+        .footer-link:hover {
+            color: #3b82f6; 
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- Header Section -->
+    <header class="bg-[#1e293b] shadow-lg">
+        <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+            <!-- Title (Link back to Home) -->
+            <a href="index.html" class="text-3xl font-bold flex-shrink-0 hover:opacity-90 transition">
+                <span class="text-blue-400">Sofort</span>Netz<span class="text-blue-400">.de</span>
+            </a>
+            
+            <!-- Marquee -->
+            <div class="hidden md:block flex-grow ml-8 h-8">
+                <div class="marquee py-1 px-4 text-blue-300 text-sm font-semibold">
+                    <span class="tracking-wider">
+                        ⭐ SOFORT AKTIVIERT &ndash; KEIN VERTRAG &ndash; NIEDRIGSTER PREIS GARANTIERT &ndash; 5G BEREIT &ndash; MOBILE INTERNET FÜR ALLE REGIONEN &ndash; WELTWEITE ABDECKUNG
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow max-w-4xl mx-auto py-16 px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center">
+        
+        <!-- Page Title -->
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-8 border-l-4 border-blue-500 pl-4 w-full text-left">
+            eSIM-Kompatibilität prüfen
+        </h1>
+
+        <!-- Compatibility Check Section (Full Logic) -->
+        <div class="w-full bg-slate-800/80 p-8 md:p-12 rounded-xl shadow-xl border border-slate-600 text-center">
+            <h3 class="text-2xl font-bold text-white mb-4">Ist mein Handy eSIM-fähig?</h3>
+            <p class="text-slate-300 mb-8">Tippen Sie Ihr Modell ein (z.B. "iPhone 13", "S24") und wählen Sie es aus der Liste.</p>
+            
+            <div class="relative max-w-lg mx-auto text-left">
+                <input type="text" id="deviceInput" placeholder="Modell suchen..." autocomplete="off"
+                       class="w-full py-4 px-6 rounded-full bg-slate-900 border border-slate-600 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/50 transition duration-200 text-lg">
+                
+                <!-- Suggestions Dropdown -->
+                <div id="suggestions" class="absolute left-0 right-0 mt-1 bg-slate-800 border border-slate-600 rounded-lg shadow-xl z-50 max-h-60 overflow-y-auto hidden">
+                    <!-- Items will be injected here -->
+                </div>
+
+                <button onclick="checkCompatibility()" 
+                        class="absolute right-1 top-1 bottom-1 bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 font-bold text-lg transition duration-200">
+                    Prüfen
+                </button>
+            </div>
+            
+            <div id="checkResult" class="mt-8 min-h-[3rem] text-lg font-semibold text-center flex items-center justify-center"></div>
+            
+            <p class="text-sm text-slate-500 mt-8 text-center leading-relaxed">
+                Hinweis: Die meisten neueren Modelle von Apple, Samsung und Google sind kompatibel. <br>
+                Prüfen Sie im Zweifel Ihre Geräteeinstellungen unter "Mobilfunk" > "eSIM hinzufügen" oder konsultieren Sie das Handbuch Ihres Herstellers.
+            </p>
+        </div>
+
+        <div class="mt-12 text-center">
+            <a href="index.html" class="text-blue-400 hover:text-blue-300 underline transition">Zurück zur Startseite</a>
+        </div>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="py-8 bg-black/50 text-white text-center mt-auto">
+        
+        <!-- Payment Methods Image -->
+        <div class="flex justify-center mb-6">
+            <img src="images/payments.png" alt="Sichere Zahlungsmethoden: Visa, Mastercard, PayPal, Apple Pay, Google Pay" class="h-12 sm:h-16 w-auto opacity-100" onerror="this.style.display='none'">
+        </div>
+        
+        <p class="text-sm mb-2">© 2025 SofortNetz.de | Mobiles Internet in Deutschland.</p>
+        <p class="text-xs text-slate-400 mb-4">Powered by eSIM Technology (Mobile Internet, Kein Vertrag).</p>
+
+        <!-- Links -->
+        <div class="mt-4 flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-4">
+            <a href="datenschutz.html" class="footer-link uppercase tracking-wider">DATENSCHUTZRICHTLINIE</a>
+            <span class="footer-link hidden md:inline">–</span>
+            <a href="refund.html" class="footer-link uppercase tracking-wider">RÜCKERSTATTUNGSRICHTLINIE</a>
+            <span class="footer-link hidden md:inline">–</span>
+            <a href="#" class="footer-link uppercase tracking-wider">LIVE-SUPPORT</a>
+        </div>
+    </footer>
+
+    <!-- Audio Element -->
+    <audio id="bg-audio" src="audio/sofortnetz1.mp3" preload="auto" loop></audio>
+
+    <script>
+        // Audio Logic
+        document.addEventListener('click', function() {
+            const audio = document.getElementById('bg-audio');
+            if (audio) {
+                audio.play().catch(e => console.error("Audio play failed:", e));
+            }
+        }, { once: true });
+
+        // --- Compatibility Check Logic ---
+        const compatibleDevices = [
+            // Apple
+            "iPhone 16", "iPhone 16 Pro", "iPhone 16 Pro Max", "iPhone 16 Plus", "iPhone 16e",
+            "iPhone 15", "iPhone 15 Pro", "iPhone 15 Pro Max", "iPhone 15 Plus",
+            "iPhone 14", "iPhone 14 Pro", "iPhone 14 Pro Max", "iPhone 14 Plus",
+            "iPhone 13", "iPhone 13 Pro", "iPhone 13 Pro Max", "iPhone 13 Mini",
+            "iPhone 12", "iPhone 12 Pro", "iPhone 12 Pro Max", "iPhone 12 Mini",
+            "iPhone 11", "iPhone 11 Pro", "iPhone 11 Pro Max",
+            "iPhone XS", "iPhone XS Max", "iPhone XR",
+            "iPhone SE (2020)", "iPhone SE (2022)",
+            
+            // Samsung
+            "Samsung Galaxy S25", "Samsung Galaxy S25+", "Samsung Galaxy S25 Ultra", "Samsung Galaxy S25 Edge", "Samsung Galaxy S25 Slim",
+            "Samsung Galaxy S24", "Samsung Galaxy S24+", "Samsung Galaxy S24 Ultra", "Samsung Galaxy S24 FE",
+            "Samsung Galaxy S23", "Samsung Galaxy S23+", "Samsung Galaxy S23 Ultra", "Samsung Galaxy S23 FE",
+            "Samsung Galaxy S22", "Samsung Galaxy S22+", "Samsung Galaxy S22 Ultra",
+            "Samsung Galaxy S21", "Samsung Galaxy S21+", "Samsung Galaxy S21 Ultra", "Samsung Galaxy S21 5G",
+            "Samsung Galaxy S20", "Samsung Galaxy S20+", "Samsung Galaxy S20 Ultra", "Samsung Galaxy S20 5G",
+            "Samsung Galaxy Note 20", "Samsung Galaxy Note 20 Ultra",
+            "Samsung Galaxy Z Flip", "Samsung Galaxy Z Flip3", "Samsung Galaxy Z Flip4", "Samsung Galaxy Z Flip5", "Samsung Galaxy Z Flip6", "Samsung Galaxy Z Flip7",
+            "Samsung Galaxy Z Fold", "Samsung Galaxy Z Fold2", "Samsung Galaxy Z Fold3", "Samsung Galaxy Z Fold4", "Samsung Galaxy Z Fold5", "Samsung Galaxy Z Fold6", "Samsung Galaxy Z Fold7",
+            "Samsung Galaxy A56", "Samsung Galaxy A55", "Samsung Galaxy A54", "Samsung Galaxy A36", "Samsung Galaxy A35",
+            "Samsung Galaxy XCover7 Pro",
+            
+            // Google Pixel
+            "Google Pixel 9", "Google Pixel 9 Pro", "Google Pixel 9 Pro XL", "Google Pixel 9 Pro Fold", "Google Pixel 9a",
+            "Google Pixel 8", "Google Pixel 8 Pro", "Google Pixel 8a",
+            "Google Pixel 7", "Google Pixel 7 Pro", "Google Pixel 7a",
+            "Google Pixel 6", "Google Pixel 6 Pro", "Google Pixel 6a",
+            "Google Pixel 5", "Google Pixel 5a",
+            "Google Pixel 4", "Google Pixel 4a", "Google Pixel 4 XL",
+            "Google Pixel 3", "Google Pixel 3a", "Google Pixel 3 XL",
+            "Google Pixel Fold",
+            
+            // Xiaomi
+            "Xiaomi 15", "Xiaomi 14", "Xiaomi 14 Pro", "Xiaomi 14T", "Xiaomi 14T Pro",
+            "Xiaomi 13", "Xiaomi 13 Pro", "Xiaomi 13 Lite", "Xiaomi 13T", "Xiaomi 13T Pro",
+            "Xiaomi 12T Pro",
+            "Xiaomi Redmi Note 14 Pro", "Xiaomi Redmi Note 14 Pro+",
+            "Xiaomi Redmi Note 13 Pro", "Xiaomi Redmi Note 13 Pro+",
+            "Xiaomi Poco X7",
+            
+            // Motorola
+            "Motorola Razr", "Motorola Razr+", "Motorola Razr 2024", "Motorola Razr 2025", "Motorola Razr 40", "Motorola Razr 40 Ultra", "Motorola Razr 50", "Motorola Razr 50 Ultra",
+            "Motorola Edge 60", "Motorola Edge 60 Pro", "Motorola Edge Fusion", "Motorola Edge+",
+            "Motorola Moto G34", "Motorola Moto G35", "Motorola Moto G53", "Motorola Moto G54", "Motorola Moto G55", "Motorola Moto G75", "Motorola Moto G84", "Motorola Moto G85",
+            
+            // Oppo
+            "Oppo Find X3 Pro", "Oppo Find X5", "Oppo Find N2 Flip", "Oppo Find N5", "Oppo Reno 6 Pro", "Oppo Reno 9A",
+            
+            // Tablets
+            "iPad Pro", "iPad Air", "iPad Mini", "iPad"
+        ];
+
+        const deviceInput = document.getElementById('deviceInput');
+        const suggestionsBox = document.getElementById('suggestions');
+        const resultDiv = document.getElementById('checkResult');
+
+        function showSuggestions() {
+            const input = deviceInput.value.toLowerCase().trim();
+            suggestionsBox.innerHTML = '';
+            
+            if (input.length < 2) {
+                suggestionsBox.classList.add('hidden');
+                return;
+            }
+
+            const searchTerms = input.split(/\s+/);
+            const matches = compatibleDevices.filter(device => {
+                const deviceLower = device.toLowerCase();
+                return searchTerms.every(term => deviceLower.includes(term));
+            });
+
+            if (matches.length > 0) {
+                matches.forEach(device => {
+                    const div = document.createElement('div');
+                    div.textContent = device;
+                    div.className = "px-5 py-3 cursor-pointer hover:bg-slate-700 text-slate-300 border-b border-slate-700 last:border-0";
+                    div.onclick = () => selectDevice(device);
+                    suggestionsBox.appendChild(div);
+                });
+                suggestionsBox.classList.remove('hidden');
+            } else {
+                suggestionsBox.classList.add('hidden');
+            }
+        }
+
+        function selectDevice(deviceName) {
+            deviceInput.value = deviceName;
+            suggestionsBox.classList.add('hidden');
+            resultDiv.innerHTML = `<span class="text-green-400 flex items-center justify-center animate-pulse"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 mr-2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> Ja! ${deviceName} ist kompatibel.</span>`;
+        }
+
+        function checkCompatibility() {
+            const input = deviceInput.value.toLowerCase().trim();
+            if (!input) {
+                resultDiv.innerHTML = '<span class="text-slate-400">Bitte geben Sie ein Modell ein.</span>';
+                return;
+            }
+            
+            const searchTerms = input.split(/\s+/);
+            const isCompatible = compatibleDevices.some(device => {
+                const deviceLower = device.toLowerCase();
+                return searchTerms.every(term => deviceLower.includes(term));
+            });
+
+            if (isCompatible) {
+                const matchedName = compatibleDevices.find(device => {
+                     const deviceLower = device.toLowerCase();
+                     return searchTerms.every(term => deviceLower.includes(term));
+                });
+                resultDiv.innerHTML = `<span class="text-green-400 flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 mr-2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> Ja! ${matchedName || 'Ihr Gerät'} ist voraussichtlich kompatibel.</span>`;
+            } else {
+                resultDiv.innerHTML = `<span class="text-yellow-400 flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 mr-2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008z" /></svg> Wir konnten dieses Modell nicht finden. Bitte prüfen Sie Ihre Einstellungen.</span>`;
+            }
+        }
+
+        deviceInput.addEventListener('input', showSuggestions);
+        document.addEventListener('click', function(e) {
+            if (!deviceInput.contains(e.target) && !suggestionsBox.contains(e.target)) {
+                suggestionsBox.classList.add('hidden');
+            }
+        });
+        document.getElementById('deviceInput').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                suggestionsBox.classList.add('hidden');
+                checkCompatibility();
+            }
+        });
+    </script>
+
+</body>
+</html>

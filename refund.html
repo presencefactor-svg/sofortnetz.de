@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SofortNetz.de | Rückerstattungsrichtlinie</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font family -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Deep blue background */
+            color: #f8fafc; /* Light default text color */
+            overflow-x: hidden; 
+        }
+        /* Custom gradient for buttons */
+        .btn-primary {
+            background-image: linear-gradient(to right, #3b82f6, #1d4ed8);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-image: linear-gradient(to right, #1d4ed8, #3b82f6);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        }
+        /* Marquee Styling */
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+            width: 100%;
+        }
+        .marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 30s linear infinite;
+        }
+        @keyframes marquee {
+            0%   { transform: translate(0, 0); }
+            100% { transform: translate(-100%, 0); }
+        }
+        /* Typography for text pages */
+        .prose h1, .prose h2, .prose h3 { color: #fff; margin-top: 1.5em; margin-bottom: 0.5em; font-weight: 700; }
+        .prose h1 { font-size: 1.5rem; }
+        @media (min-width: 768px) { .prose h1 { font-size: 2.25rem; } }
+        .prose h2 { font-size: 1.25rem; border-bottom: 1px solid #334155; padding-bottom: 0.5rem; }
+        @media (min-width: 768px) { .prose h2 { font-size: 1.5rem; } }
+        .prose p { margin-bottom: 1em; line-height: 1.7; color: #cbd5e1; }
+        .prose ul { list-style-type: disc; padding-left: 1.5em; margin-bottom: 1em; color: #cbd5e1; }
+        .prose a { color: #3b82f6; text-decoration: underline; }
+        
+        .footer-link {
+            font-size: 0.75rem; 
+            color: #94a3b8;
+            transition: color 0.2s;
+        }
+        .footer-link:hover {
+            color: #3b82f6; 
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- Header Section -->
+    <header class="bg-[#1e293b] shadow-lg">
+        <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+            <!-- Title (Link back to Home) -->
+            <a href="index.html" class="text-3xl font-bold flex-shrink-0 hover:opacity-90 transition">
+                <span class="text-blue-400">Sofort</span>Netz<span class="text-blue-400">.de</span>
+            </a>
+            
+            <!-- Marquee -->
+            <div class="hidden md:block flex-grow ml-8 h-8">
+                <div class="marquee py-1 px-4 text-blue-300 text-sm font-semibold">
+                    <span class="tracking-wider">
+                        ⭐ SOFORT AKTIVIERT &ndash; KEIN VERTRAG &ndash; NIEDRIGSTER PREIS GARANTIERT &ndash; 5G BEREIT &ndash; MOBILE INTERNET FÜR ALLE REGIONEN &ndash; WELTWEITE ABDECKUNG
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow max-w-4xl mx-auto py-16 px-4 sm:px-6 lg:px-8 w-full">
+        
+        <!-- Page Title -->
+        <!-- Reduced mobile font size to text-xl to prevent overflow -->
+        <h1 class="text-xl md:text-4xl font-bold text-white mb-8 border-l-4 border-blue-500 pl-4 break-words break-all hyphens-auto">
+            Rückerstattungsrichtlinie
+        </h1>
+
+        <!-- Content Wrapper -->
+        <div class="bg-slate-800/50 p-4 md:p-8 rounded-xl border border-slate-700 shadow-xl prose max-w-none">
+            
+            <p><strong>Factory Direct LTD</strong> ist bestrebt, sicherzustellen, dass Sie mit unseren eSIM-Diensten zufrieden sind. Aufgrund der digitalen Natur unserer Produkte gelten jedoch spezifische Bedingungen für Rückerstattungen.</p>
+
+            <h2>1. Allgemeine Bedingungen</h2>
+            <p>Wir bieten eine Rückerstattung ("Geld-zurück-Garantie") unter den folgenden Bedingungen an:</p>
+            <ul>
+                <li>Die eSIM wurde gekauft, aber <strong>noch nicht installiert oder aktiviert</strong>.</li>
+                <li>Es liegt ein nachweisbares technisches Problem mit der eSIM vor, das durch unseren Support nicht behoben werden konnte.</li>
+                <li>Die Anfrage erfolgt innerhalb von <strong>14 Tagen</strong> nach dem Kaufdatum.</li>
+            </ul>
+
+            <h2>2. Technische Probleme</h2>
+            <p>Sollte die eSIM aufgrund eines technischen Fehlers auf unserer Seite oder seitens des Netzbetreibers nicht funktionieren, haben Sie Anspruch auf eine volle Rückerstattung oder einen kostenlosen Ersatz. Bitte kontaktieren Sie unseren Support (support@sofortnetz.de) und senden Sie uns Screenshots der Fehlermeldung oder der Einstellungen.</p>
+
+            <h2>3. Nicht erstattungsfähige Fälle</h2>
+            <p>Eine Rückerstattung ist in den folgenden Fällen ausgeschlossen:</p>
+            <ul>
+                <li>Das Datenpaket wurde bereits teilweise oder vollständig genutzt.</li>
+                <li>Das Problem liegt an einem nicht kompatiblen Gerät (SIM-Lock oder fehlende eSIM-Unterstützung). Wir bitten alle Kunden, die Kompatibilität ihres Geräts <strong>vor dem Kauf</strong> zu prüfen.</li>
+                <li>Der Kunde hat sich umentschieden, nachdem die eSIM bereits installiert wurde.</li>
+                <li>Schlechte Netzabdeckung an einem spezifischen, lokalen Standort, sofern das Netz generell im Land verfügbar ist.</li>
+            </ul>
+
+            <h2>4. Ablauf der Rückerstattung</h2>
+            <p>Um eine Rückerstattung zu beantragen, senden Sie bitte eine E-Mail an <strong>support@sofortnetz.de</strong> mit Ihrer Bestellnummer und einer Beschreibung des Problems.</p>
+            <p>Genehmigte Rückerstattungen werden innerhalb von 5–10 Werktagen auf die ursprüngliche Zahlungsmethode (z.B. Kreditkarte via Stripe) gutgeschrieben.</p>
+
+            <p><strong>Factory Direct LTD</strong><br>124 City Road, London, England, UK</p>
+
+        </div>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="py-8 bg-black/50 text-white text-center mt-auto">
+        
+        <!-- Added Logo -->
+        <div class="mb-6">
+            <h2 class="text-3xl font-bold">
+                <span class="text-blue-400">Sofort</span>Netz<span class="text-blue-400">.de</span>
+            </h2>
+        </div>
+
+        <p class="text-sm mb-2">© 2025 SofortNetz.de | Mobiles Internet in Deutschland.</p>
+        <p class="text-xs text-slate-400 mb-4">Powered by eSIM Technology (Mobile Internet, Kein Vertrag).</p>
+
+        <!-- Payment Methods Image -->
+        <div class="flex justify-center mb-6 mt-4">
+            <img src="images/payments.png" alt="Sichere Zahlungsmethoden: Visa, Mastercard, PayPal, Apple Pay, Google Pay" class="h-12 sm:h-16 w-auto opacity-100" onerror="this.style.display='none'">
+        </div>
+
+        <!-- Links -->
+        <div class="mt-4 flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-4">
+            <a href="datenschutz.html" class="footer-link uppercase tracking-wider">DATENSCHUTZRICHTLINIE</a>
+            <span class="footer-link hidden md:inline">–</span>
+            <a href="refund.html" class="footer-link uppercase tracking-wider">RÜCKERSTATTUNGSRICHTLINIE</a>
+            <span class="footer-link hidden md:inline">–</span>
+            <a href="#" class="footer-link uppercase tracking-wider">LIVE-SUPPORT</a>
+        </div>
+    </footer>
+
+    <!-- Audio Element -->
+    <audio id="bg-audio" src="audio/sofortnetz1.mp3" preload="auto" loop></audio>
+
+    <script>
+        // Audio Logic
+        document.addEventListener('click', function() {
+            const audio = document.getElementById('bg-audio');
+            if (audio) {
+                audio.play().catch(e => console.error("Audio play failed:", e));
+            }
+        }, { once: true });
+    </script>
+
+</body>
+</html>

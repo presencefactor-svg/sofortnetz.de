@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SofortNetz.de | Datenschutzrichtlinie</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font family -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Deep blue background */
+            color: #f8fafc; /* Light default text color */
+            overflow-x: hidden; 
+        }
+        /* Custom gradient for buttons */
+        .btn-primary {
+            background-image: linear-gradient(to right, #3b82f6, #1d4ed8);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-image: linear-gradient(to right, #1d4ed8, #3b82f6);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        }
+        /* Marquee Styling */
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+            width: 100%;
+        }
+        .marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 30s linear infinite;
+        }
+        @keyframes marquee {
+            0%   { transform: translate(0, 0); }
+            100% { transform: translate(-100%, 0); }
+        }
+        /* Typography for text pages */
+        .prose h1, .prose h2, .prose h3 { color: #fff; margin-top: 1.5em; margin-bottom: 0.5em; font-weight: 700; }
+        .prose h1 { font-size: 1.5rem; } /* Adjusted for mobile */
+        @media (min-width: 768px) { .prose h1 { font-size: 2.25rem; } }
+        .prose h2 { font-size: 1.25rem; border-bottom: 1px solid #334155; padding-bottom: 0.5rem; }
+        @media (min-width: 768px) { .prose h2 { font-size: 1.5rem; } }
+        .prose h3 { font-size: 1.1rem; margin-top: 1em; }
+        @media (min-width: 768px) { .prose h3 { font-size: 1.25rem; } }
+        .prose p { margin-bottom: 1em; line-height: 1.7; color: #cbd5e1; }
+        .prose ul { list-style-type: disc; padding-left: 1.5em; margin-bottom: 1em; color: #cbd5e1; }
+        .prose strong { color: #e2e8f0; font-weight: 600; }
+        .prose a { color: #3b82f6; text-decoration: underline; }
+        
+        .footer-link {
+            font-size: 0.75rem; 
+            color: #94a3b8;
+            transition: color 0.2s;
+        }
+        .footer-link:hover {
+            color: #3b82f6; 
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- Header Section -->
+    <header class="bg-[#1e293b] shadow-lg">
+        <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+            <!-- Title (Link back to Home) -->
+            <a href="index.html" class="text-3xl font-bold flex-shrink-0 hover:opacity-90 transition">
+                <span class="text-blue-400">Sofort</span>Netz<span class="text-blue-400">.de</span>
+            </a>
+            
+            <!-- Marquee -->
+            <div class="hidden md:block flex-grow ml-8 h-8">
+                <div class="marquee py-1 px-4 text-blue-300 text-sm font-semibold">
+                    <span class="tracking-wider">
+                        ⭐ SOFORT AKTIVIERT &ndash; KEIN VERTRAG &ndash; NIEDRIGSTER PREIS GARANTIERT &ndash; 5G BEREIT &ndash; MOBILE INTERNET FÜR ALLE REGIONEN &ndash; WELTWEITE ABDECKUNG
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow max-w-4xl mx-auto py-16 px-4 sm:px-6 lg:px-8 w-full">
+        
+        <!-- Page Title -->
+        <h1 class="text-2xl md:text-4xl font-bold text-white mb-8 border-l-4 border-blue-500 pl-4 break-words">
+            Datenschutzrichtlinie
+        </h1>
+
+        <!-- Content Wrapper -->
+        <div class="bg-slate-800/50 p-4 md:p-8 rounded-xl border border-slate-700 shadow-xl prose max-w-none">
+            
+            <p><strong>Stand: Dezember 2025</strong></p>
+
+            <h2>1. Einleitung</h2>
+            <p>Willkommen bei SofortNetz.de. Der Schutz Ihrer persönlichen Daten ist uns ein wichtiges Anliegen. Diese Datenschutzrichtlinie informiert Sie darüber, wie wir Ihre Daten erheben, nutzen und schützen, wenn Sie unsere Website besuchen und unsere Dienste (eSIM-Datentarife) nutzen.</p>
+            
+            <h2>2. Verantwortliche Stelle</h2>
+            <p>Verantwortlich für die Datenverarbeitung auf dieser Website im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:</p>
+            <p>
+                <strong>Factory Direct LTD</strong><br>
+                124 City Road<br>
+                London, England, UK<br>
+                E-Mail: support@sofortnetz.de
+            </p>
+
+            <h2>3. Erhebung und Speicherung personenbezogener Daten</h2>
+            <h3>a) Beim Besuch der Website</h3>
+            <p>Beim Aufrufen unserer Website werden durch den auf Ihrem Endgerät zum Einsatz kommenden Browser automatisch Informationen an den Server unserer Website gesendet. Diese Informationen werden temporär in einem sog. Logfile gespeichert (z.B. IP-Adresse, Datum und Uhrzeit des Zugriffs, Name und URL der abgerufenen Datei).</p>
+
+            <h3>b) Bei der Bestellung einer eSIM</h3>
+            <p>Wenn Sie ein Datenpaket bei uns bestellen, erheben wir folgende Daten, die für die Vertragsabwicklung erforderlich sind:</p>
+            <ul>
+                <li>E-Mail-Adresse (für den Versand des QR-Codes)</li>
+                <li>Zahlungsinformationen (diese werden sicher über unseren Zahlungsdienstleister Stripe verarbeitet; wir speichern keine vollständigen Kreditkartendaten)</li>
+                <li>Geräteinformationen (zur Sicherstellung der Kompatibilität, falls erforderlich)</li>
+            </ul>
+            <p>Es findet keine Identitätsprüfung (Video-Ident) statt, da es sich um reine Datentarife handelt.</p>
+
+            <h2>4. Weitergabe von Daten</h2>
+            <p>Eine Übermittlung Ihrer persönlichen Daten an Dritte zu anderen als den im Folgenden aufgeführten Zwecken findet nicht statt.</p>
+            <p>Wir geben Ihre persönlichen Daten nur an Dritte weiter, wenn:</p>
+            <ul>
+                <li>Sie Ihre ausdrückliche Einwilligung dazu erteilt haben,</li>
+                <li>die Weitergabe zur Abwicklung von Vertragsverhältnissen mit Ihnen erforderlich ist (z.B. an Zahlungsdienstleister wie Stripe),</li>
+                <li>eine gesetzliche Verpflichtung zur Weitergabe besteht.</li>
+            </ul>
+
+            <h2>5. Zahlungsabwicklung</h2>
+            <p>Auf unserer Website bieten wir Bezahlmöglichkeiten via Kreditkarte, Apple Pay, Google Pay und andere Methoden an. Die Abwicklung erfolgt über den Zahlungsdienstleister <strong>Stripe</strong>. Die Zahlungsdaten, die Sie eingeben, werden direkt an Stripe übermittelt und nicht auf unseren Servern gespeichert.</p>
+
+            <h2>6. Cookies und Analyse-Tools</h2>
+            <p>Wir setzen auf unserer Seite Cookies ein. Hierbei handelt es sich um kleine Dateien, die Ihr Browser automatisch erstellt und die auf Ihrem Endgerät gespeichert werden. Diese dienen dazu, die Nutzung unseres Angebots für Sie angenehmer zu gestalten (z.B. Speicherung des Warenkorbs).</p>
+
+            <h2>7. Ihre Rechte</h2>
+            <p>Sie haben das Recht:</p>
+            <ul>
+                <li>Auskunft über Ihre von uns verarbeiteten personenbezogenen Daten zu verlangen,</li>
+                <li>die Berichtigung unrichtiger oder Vervollständigung Ihrer bei uns gespeicherten personenbezogenen Daten zu verlangen,</li>
+                <li>die Löschung Ihrer bei uns gespeicherten personenbezogenen Daten zu verlangen,</li>
+                <li>die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</li>
+            </ul>
+            <p>Möchten Sie von Ihrem Widerrufs- oder Widerspruchsrecht Gebrauch machen, genügt eine E-Mail an support@sofortnetz.de.</p>
+
+            <h2>8. Datensicherheit</h2>
+            <p>Wir verwenden innerhalb des Website-Besuchs das verbreitete SSL-Verfahren (Secure Socket Layer) in Verbindung mit der jeweils höchsten Verschlüsselungsstufe, die von Ihrem Browser unterstützt wird. Sie erkennen dies am Schlüsselsymbol in der Statusleiste Ihres Browsers.</p>
+
+            <h2>9. Aktualität und Änderung dieser Datenschutzerklärung</h2>
+            <p>Diese Datenschutzerklärung ist aktuell gültig. Durch die Weiterentwicklung unserer Website und Angebote oder aufgrund geänderter gesetzlicher beziehungsweise behördlicher Vorgaben kann es notwendig werden, diese Datenschutzerklärung zu ändern.</p>
+
+        </div>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="py-8 bg-black/50 text-white text-center mt-auto">
+        
+        <!-- Added Logo -->
+        <div class="mb-6">
+            <h2 class="text-3xl font-bold">
+                <span class="text-blue-400">Sofort</span>Netz<span class="text-blue-400">.de</span>
+            </h2>
+        </div>
+
+        <p class="text-sm mb-2">© 2025 SofortNetz.de | Mobiles Internet in Deutschland.</p>
+        <p class="text-xs text-slate-400 mb-4">Powered by eSIM Technology (Mobile Internet, Kein Vertrag).</p>
+
+        <!-- Payment Methods Image -->
+        <div class="flex justify-center mb-6 mt-4">
+            <img src="images/payments.png" alt="Sichere Zahlungsmethoden: Visa, Mastercard, PayPal, Apple Pay, Google Pay" class="h-12 sm:h-16 w-auto opacity-100" onerror="this.style.display='none'">
+        </div>
+
+        <!-- Links -->
+        <div class="mt-4 flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-4">
+            <a href="datenschutz.html" class="footer-link uppercase tracking-wider">DATENSCHUTZRICHTLINIE</a>
+            <span class="footer-link hidden md:inline">–</span>
+            <a href="refund.html" class="footer-link uppercase tracking-wider">RÜCKERSTATTUNGSRICHTLINIE</a>
+            <span class="footer-link hidden md:inline">–</span>
+            <a href="#" class="footer-link uppercase tracking-wider">LIVE-SUPPORT</a>
+        </div>
+    </footer>
+
+    <!-- Audio Element -->
+    <audio id="bg-audio" src="audio/sofortnetz1.mp3" preload="auto" loop></audio>
+
+    <script>
+        // Audio Logic
+        document.addEventListener('click', function() {
+            const audio = document.getElementById('bg-audio');
+            if (audio) {
+                audio.play().catch(e => console.error("Audio play failed:", e));
+            }
+        }, { once: true });
+    </script>
+
+</body>
+</html>
