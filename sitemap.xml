@@ -138,4 +138,46 @@
     <priority>0.7</priority>
     <changefreq>weekly</changefreq>
   </url>
+  <url>
+    <loc>https://sofortnetz.de/blog/munchen-esim-2026.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sofortnetz.de/blog/munchen-esim-2026.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofortnetz.de/blog/munich-esim-2026-en.html" />
+    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://sofortnetz.de/blog/munich-esim-2026-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sofortnetz.de/blog/munchen-esim-2026.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofortnetz.de/blog/munich-esim-2026-en.html" />
+    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://sofortnetz.de/blog/frankfurt-esim-2026.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sofortnetz.de/blog/frankfurt-esim-2026.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofortnetz.de/blog/frankfurt-esim-2026-en.html" />
+    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://sofortnetz.de/blog/frankfurt-esim-2026-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sofortnetz.de/blog/frankfurt-esim-2026.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofortnetz.de/blog/frankfurt-esim-2026-en.html" />
+    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://sofortnetz.de/blog/esim-geschaeftsreisen-deutschland-2026.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sofortnetz.de/blog/esim-geschaeftsreisen-deutschland-2026.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofortnetz.de/blog/business-travel-germany-esim-2026-en.html" />
+    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://sofortnetz.de/blog/business-travel-germany-esim-2026-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sofortnetz.de/blog/esim-geschaeftsreisen-deutschland-2026.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofortnetz.de/blog/business-travel-germany-esim-2026-en.html" />
+    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+  </url>
 </urlset>
