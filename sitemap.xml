@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <!-- Homepage with language alternates -->
   <url>
     <loc>https://sofortnetz.de/</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://sofortnetz.de/" />
@@ -56,25 +55,14 @@
     <priority>0.8</priority>
     <changefreq>daily</changefreq>
   </url>
-  <!-- Other Pages -->
   <url>
     <loc>https://sofortnetz.de/worldwide.html</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://sofortnetz.de/eu-retail.html</loc>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://sofortnetz.de/partners.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
     <loc>https://sofortnetz.de/compatibility.html</loc>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
@@ -86,5 +74,15 @@
     <loc>https://sofortnetz.de/datenschutz.html</loc>
     <priority>0.5</priority>
     <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://sofortnetz.de/blog/beste-esim-deutschland-2026.html</loc>
+    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://sofortnetz.de/blog/best-esim-germany-2026.html</loc>
+    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
   </url>
 </urlset>
